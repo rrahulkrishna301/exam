@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS 3</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Arial, sans-serif; }
+
+  .login-page {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  
+  .login-image {
+    flex: 1;
+    background: linear-gradient(180deg, #b9b6d8 0%, #e9d9d2 60%, #e8b98a 100%);
+  }
+
+  
+  .login-box {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 30px;
+    background: white;
+  }
+  .login-box h2 {
+    color: #c0504d;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+  .login-box label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 14px 0 6px;
+  }
+  .login-box input[type="email"],
+  .login-box input[type="password"] {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+  }
+  .remember {
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .remember label {
+    display: inline;
+    font-weight: normal;
+  }
+  .login-box button {
+    width: 100%;
+    padding: 10px;
+    background: #e0674f;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  
+  @media (max-width: 768px) {
+    .login-image { display: none; }
+    .login-box { flex: 1; }
+    .login-box h2 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+  <div class="login-page">
+    <div class="login-image"></div>
+
+    <form class="login-box">
+      <h2>Login Form</h2>
+
+      <label for="email">Email :</label>
+      <input type="email" id="email">
+
+      <label for="password">Password :</label>
+      <input type="password" id="password">
+
+      <div class="remember">
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember Me</label>
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>
